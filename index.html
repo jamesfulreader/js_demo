@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Javascript Demo</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="title">Javascript Demo</h1>
+            <button id="printConsole">
+                Print to console (remember to press crtl + shift + i)
+            </button>
+            <br />
+            <button id="createEl">Create P Tag</button>
+            <br />
+            <button id="show-hidden">Show Hidden Container</button>
+            <br />
+            <button id="el-prepend">
+                Prepend element to container with all these buttons
+            </button>
+            <br />
+            <button id="open">Open modal</button>
+            <br />
+            <label for="page-text">Enter a new text for the page</label><br />
+            <textarea
+                name="page-text"
+                id="page-text"
+                rows="4"
+                cols="50"
+            ></textarea>
+            <br />
+            <h2>Color Picker</h2>
+            <input type="color" name="color-picker" id="color-picker" />
+        </div>
+        <div>
+            <p id="change-text">
+                Here is some text that will be replaced when you type in the
+                input above
+            </p>
+        </div>
+        <div class="appendEl" id="appendEl"></div>
+        <div id="hidden" style="display: none;">
+            <h2>This is a hidden container with secret stuff</h2>
+        </div>
+
+        <div class="modal-container" id="modal">
+            <div class="modal">
+                <button class="close-btn" id="close">
+                    <i class="fa fa-times"></i>
+                </button>
+                <div class="modal-header">
+                    <h3>Modal</h3>
+                </div>
+                <div class="modal-content">
+                    <p>
+                        Modal where you can put stuff you can click outside of
+                        it to close it!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://kit.fontawesome.com/9ca00cad1b.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="script.js"></script>
+    </body>
+</html>

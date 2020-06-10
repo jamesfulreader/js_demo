@@ -1,0 +1,116 @@
+:root {
+    --modal-duration: 1s;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+span {
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #fcfcfc;
+}
+
+.container {
+    margin-top: 10px;
+}
+
+.container button:nth-of-type(odd) {
+    margin: 10px;
+}
+
+.toggle {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.container {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.modal-container.show-modal {
+    display: block;
+}
+
+.modal {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    width: 400px;
+    animation-name: modal-open;
+    animation-duration: var(--modal-duration);
+}
+
+.modal-header {
+    color: rgb(0, 0, 0);
+    padding: 15px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    border-bottom: 1px solid #333;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.close-btn {
+    background: transparent;
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px;
+}
+
+@keyframes modal-open {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
