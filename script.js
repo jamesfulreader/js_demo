@@ -71,9 +71,20 @@ function changeTitleColor(e) {
     const color = e.target.value;
     console.log(color);
     const title = document.getElementById('title');
-
     title.style.color = color;
 }
+
+async function getLoremPosts() {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const data = await res.json();
+    console.log(data);
+
+    data.map((postData) => {
+        console.log(`<h1>${postData.title}</h1><p>${postData.body}</p>`);
+    });
+}
+
+getLoremPosts();
 
 createEl.addEventListener('click', createElement);
 printConsole.addEventListener('click', consoleLog);
