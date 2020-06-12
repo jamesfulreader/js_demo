@@ -80,11 +80,13 @@ async function getLoremPosts() {
     console.log(data);
 
     data.map((postData) => {
-        console.log(`<h1>${postData.title}</h1><p>${postData.body}</p>`);
+        document.getElementById(
+            'fetch-results'
+        ).innerHTML += `<h3>${postData.title}</h3><p>${postData.body}</p>`;
     });
 }
 
-getLoremPosts();
+// getLoremPosts();
 
 createEl.addEventListener('click', createElement);
 printConsole.addEventListener('click', consoleLog);
